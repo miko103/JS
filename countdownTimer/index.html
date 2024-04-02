@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="script.js" defer></script>
+        <link rel="stylesheet" href="styles.css"></style>
+    </head>
+    <body class="centered">
+        <h1><u>Timer</u></h1>
+        <div>
+            <p><b>Enter Time (HH:MM:SS)</b></p>
+            <input type="text" id="timeInput">
+            <button type="button" id="sumbitButton" onclick="buttonHandler()">Set Time</button>
+        </div>
+
+        <br><br><br><br><br>
+
+        <div class="timerDiv">
+            <h4 id="currentTime">00:00:00</h4>
+        </div>
+        <div style="padding: 150px;">
+            <button id="start" type="button">Start Countdown</button>
+            <button id="pause" type="button">Pause Countdown</button>
+        </div>
+    </body>
+</html> 
