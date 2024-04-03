@@ -38,8 +38,8 @@ function decreaseTime(){
     time.innerHTML = `${newcurrentTime.getHours()}:${newcurrentTime.getMinutes()}:${newcurrentTime.getSeconds()}`
     console.log("time decreased")
 }
-
-function pauseCountdown(myCoolInterval){
+// this part here is broken. it dont clear the interval :/
+function pauseCountdown(myCoolInterval){ 
     clearInterval(myCoolInterval);
     console.log(`interval ${myCoolInterval} cleared`)
     //myCoolInterval = null;
