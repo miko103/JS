@@ -1,32 +1,38 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <script src="script.js" defer></script>
-        <link rel="stylesheet" href=styles.css>
-        <title>To Do List</title>
-    </head>
-    <body class="body">
-        <!--The main box div-->
-        <div class="mainboxdiv">
-            <div class="title">
-                <u>To Do List</u>
-            </div>
-            <div>
-                <p>Enter new task...</p>
-                <input type="text" id="tasknameinput">
-                <button id="submit" onclick="createTask()">Submit</button>
-            </div>
-            <!--Add Tasks in div below--> <br>
-            <div id="tasksDiv">
-                <!--Example Task-->
-                <div class="task" id="task">
-                    <p id="taskLabel">Learn more javascript! 
-                        <input type="checkbox" id="doneCheckbox">
-                        <button id="deleteButton" onclick="deleteTask()">Delete</button>
-                        <button id="editButton" onclick="editTask()">Edit</button>
-                    </p>
-                </div>
-            </div>
+
+<head>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href=styles.css>
+    <title>To Do List</title>
+</head>
+
+<body class="body" onload="loadTasksFromStorage()">
+    <button onclick="createExampleTask()">example task</button>
+    <button onclick="localStorage.clear()">clear storage</button>
+    <!--The main box div-->
+    <div class="mainboxdiv">
+        <div class="title">
+            <u>To Do List</u>
         </div>
-    </body> 
+        <div>
+            <p>Enter new task...</p>
+            <input type="text" id="tasknameinput">
+            <button id="submit" onclick="createTask()">Submit</button>
+        </div>
+        <!--Add Tasks in div below--> <br>
+        <div id="tasksDiv">
+            <!--Example Task
+            <div class="task">
+                <p id="taskLabel">Learn more javascript!
+                    <input type="checkbox" id="doneCheckbox" onclick="updateDoneStatus()">
+                    <button id="deleteButton" onclick="deleteTask()">Delete</button>
+                    <button id="editButton" onclick="editTask()">Edit</button>
+                </p>
+            </div>
+            -->
+        </div>
+    </div>
+</body>
+
 </html>
