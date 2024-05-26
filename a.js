@@ -1,1 +1,4 @@
-alert(1)
+let i=1;
+while (i==1){
+    console.log("test")
+}
